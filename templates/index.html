@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlaskApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #343a40;
+        }
+        p {
+            color: #6c757d;
+        }
+        form {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="file"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>CVE-2024-3571 POC</h1>
+    <p>This is a sample application built with LangChain which is becoming increasingly popular. LangChain is a framework designed to simplify the creation of applications using large language models.</p>
+    <p>You can upload and retrieve files through the forms below to perform fancy AI analysis.</p>
+
+    <form action="/get-file" method="post">
+        <label for="filename">Enter a filename to fetch:</label>
+        <input type="text" id="filename" name="filename" placeholder="Filename" required>
+        <input type="submit" value="Query">
+    </form>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">Choose a file to upload:</label>
+        <input type="file" id="file" name="file" accept=".txt" required>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
