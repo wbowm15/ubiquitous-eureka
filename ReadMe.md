@@ -1,6 +1,6 @@
 ## Setup 
 1. git clone https://github.com/wbowm15/ubiquitous-eureka.git
-2. cd ubiquitous-eureka/  
+2. cd ubiquitous-eureka
 3. docker build -t server . 
 4. docker run -p5000:5000 server
 
