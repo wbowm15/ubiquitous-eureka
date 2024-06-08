@@ -1,0 +1,2 @@
+Flask
+langchain==0.0.352
